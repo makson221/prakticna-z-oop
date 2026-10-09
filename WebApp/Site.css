@@ -1,0 +1,121 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f2f4f7;
+    color: #1f2933;
+    margin: 0;
+    padding: 32px 16px;
+}
+
+.card {
+    max-width: 560px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #d9dee5;
+    border-radius: 8px;
+    padding: 24px 28px;
+}
+
+h1 {
+    font-size: 22px;
+    margin: 0 0 8px 0;
+}
+
+.task {
+    color: #52606d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.inputs td {
+    padding: 4px 8px 4px 0;
+    font-size: 16px;
+}
+
+.inputs input[type="text"] {
+    width: 160px;
+    padding: 6px 8px;
+    font-size: 16px;
+    border: 1px solid #b8c2cc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    margin-top: 12px;
+    padding: 8px 18px;
+    font-size: 15px;
+    background: #2f6fd0;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #2459a8;
+}
+
+.result {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.result.ok {
+    color: #1d7a3a;
+}
+
+.result.error {
+    color: #c0392b;
+}
+
+/* Схема координатної площини: II | I
+                                III | IV */
+.plane {
+    display: grid;
+    grid-template-columns: 90px 90px;
+    grid-template-rows: 60px 60px;
+    width: 180px;
+    position: relative;
+    margin: 8px 0 16px 0;
+}
+
+/* Осі OY та OX */
+.plane::before,
+.plane::after {
+    content: "";
+    position: absolute;
+    background: #1f2933;
+}
+
+.plane::before {
+    left: 89px;
+    top: -6px;
+    bottom: -6px;
+    width: 2px;
+}
+
+.plane::after {
+    top: 59px;
+    left: -6px;
+    right: -6px;
+    height: 2px;
+}
+
+.plane .q {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #7b8794;
+}
+
+.plane .q.active {
+    background: #d6f0dd;
+    color: #1d7a3a;
+    font-weight: 700;
+}
+
+.nav {
+    font-size: 14px;
+    margin-bottom: 0;
+}
